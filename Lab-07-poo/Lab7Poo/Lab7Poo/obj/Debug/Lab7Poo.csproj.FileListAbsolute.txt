@@ -1,0 +1,10 @@
+C:\Users\Acer\Desktop\Lab-07-poo\Lab7Poo\Lab7Poo\bin\Debug\Lab7Poo.exe.config
+C:\Users\Acer\Desktop\Lab-07-poo\Lab7Poo\Lab7Poo\bin\Debug\Lab7Poo.exe
+C:\Users\Acer\Desktop\Lab-07-poo\Lab7Poo\Lab7Poo\bin\Debug\Lab7Poo.pdb
+C:\Users\Acer\Desktop\Lab-07-poo\Lab7Poo\Lab7Poo\obj\Debug\Lab7Poo.csprojAssemblyReference.cache
+C:\Users\Acer\Desktop\Lab-07-poo\Lab7Poo\Lab7Poo\obj\Debug\Lab7Poo.Form1.resources
+C:\Users\Acer\Desktop\Lab-07-poo\Lab7Poo\Lab7Poo\obj\Debug\Lab7Poo.Properties.Resources.resources
+C:\Users\Acer\Desktop\Lab-07-poo\Lab7Poo\Lab7Poo\obj\Debug\Lab7Poo.csproj.GenerateResource.cache
+C:\Users\Acer\Desktop\Lab-07-poo\Lab7Poo\Lab7Poo\obj\Debug\Lab7Poo.csproj.CoreCompileInputs.cache
+C:\Users\Acer\Desktop\Lab-07-poo\Lab7Poo\Lab7Poo\obj\Debug\Lab7Poo.exe
+C:\Users\Acer\Desktop\Lab-07-poo\Lab7Poo\Lab7Poo\obj\Debug\Lab7Poo.pdb
