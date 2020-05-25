@@ -48,6 +48,7 @@
             this.division = new System.Windows.Forms.Button();
             this.botonborratodo = new System.Windows.Forms.Button();
             this.pantalla = new System.Windows.Forms.TextBox();
+            this.Historial = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // b7
@@ -257,17 +258,29 @@
             this.pantalla.Location = new System.Drawing.Point(12, 23);
             this.pantalla.Name = "pantalla";
             this.pantalla.ReadOnly = true;
-            this.pantalla.Size = new System.Drawing.Size(411, 20);
+            this.pantalla.Size = new System.Drawing.Size(422, 20);
             this.pantalla.TabIndex = 20;
             this.pantalla.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.pantalla.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            // 
+            // Historial
+            // 
+            this.Historial.BackColor = System.Drawing.Color.Violet;
+            this.Historial.Location = new System.Drawing.Point(183, 301);
+            this.Historial.Name = "Historial";
+            this.Historial.Size = new System.Drawing.Size(61, 23);
+            this.Historial.TabIndex = 21;
+            this.Historial.Text = "Historial";
+            this.Historial.UseVisualStyleBackColor = false;
+            this.Historial.Click += new System.EventHandler(this.Historial_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(444, 355);
+            this.ClientSize = new System.Drawing.Size(455, 355);
+            this.Controls.Add(this.Historial);
             this.Controls.Add(this.pantalla);
             this.Controls.Add(this.resultado);
             this.Controls.Add(this.restar);
@@ -318,6 +331,7 @@
         private System.Windows.Forms.Button division;
         private System.Windows.Forms.Button botonborratodo;
         private System.Windows.Forms.TextBox pantalla;
+        private System.Windows.Forms.Button Historial;
     }
 }
 

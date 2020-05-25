@@ -17,6 +17,7 @@ namespace Lab7Poo
         double segundo;
         double resultado_op;
         string operador;
+        List<string> memoria = new List<string>();
 
         public Form1()
         {
@@ -31,6 +32,7 @@ namespace Lab7Poo
         private void button3_Click(object sender, EventArgs e)
         {
             pantalla.Text = pantalla.Text + "1";
+            memoria.Add(pantalla.Text);
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -177,28 +179,34 @@ namespace Lab7Poo
 
                         resultado_op = primero + segundo;
                         pantalla.Text = resultado_op.ToString();
+                        memoria.Add(pantalla.Text);
                         break;
                     case "-":
                         resultado_op = primero - segundo;
                         pantalla.Text = resultado_op.ToString();
+                        memoria.Add(pantalla.Text);
                         break;
                     case "X":
                         resultado_op = primero * segundo;
                         pantalla.Text = resultado_op.ToString();
+                        memoria.Add(pantalla.Text);
                         break;
                     case "/":
                         resultado_op = primero / segundo;
                         pantalla.Text = resultado_op.ToString();
+                        memoria.Add(pantalla.Text);
                         switch (segundo)
                         {
                             case 0:
                                 pantalla.Text = "Math ERROR";
+                                memoria.Add(pantalla.Text);
                                 break;
                         }
                         break;
                     case "=":
                         resultado_op = primero;
                         pantalla.Text = resultado_op.ToString();
+                        memoria.Add(pantalla.Text);
                         break;
 
                 }
@@ -222,6 +230,15 @@ namespace Lab7Poo
             }
         }
 
+        private void Historial_Click(object sender, EventArgs e)
+        {
+            int i = 0;
+            foreach (var item in memoria) 
+            {
+                pantalla.Text = memoria[i];
+                i++;
+            }
+        }
 
     }
 }
