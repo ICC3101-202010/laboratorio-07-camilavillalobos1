@@ -17,7 +17,6 @@ namespace Lab7Poo
         double segundo;
         double resultado_op;
         string operador;
-        double cadena;
 
         public Form1()
         {
@@ -52,9 +51,16 @@ namespace Lab7Poo
 
         private void button19_Click(object sender, EventArgs e)
         {
-            operador = "/";
-            primero = double.Parse(pantalla.Text);
-            pantalla.Clear();
+            try
+            {
+                operador = "/";
+                primero = double.Parse(pantalla.Text);
+                pantalla.Clear();
+            }
+            catch (Exception)
+            {
+                pantalla.Text = "Syntax ERROR";
+            }
         }
 
         private void button13_Click(object sender, EventArgs e)
@@ -69,9 +75,16 @@ namespace Lab7Poo
 
         private void multiplicar_Click(object sender, EventArgs e)
         {
-            operador = "X";
-            primero = double.Parse(pantalla.Text);
-            pantalla.Clear();
+            try
+            {
+                operador = "X";
+                primero = double.Parse(pantalla.Text);
+                pantalla.Clear();
+            }
+            catch (Exception)
+            {
+                pantalla.Text = "Syntax ERROR";
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -126,48 +139,75 @@ namespace Lab7Poo
 
         private void sumar_Click(object sender, EventArgs e)
         {
-            operador = "+";
-            primero = double.Parse(pantalla.Text);
-            pantalla.Clear();
+            try 
+            {
+                operador = "+";
+                primero = double.Parse(pantalla.Text);
+                pantalla.Clear();
+            }
+            catch (Exception)
+            {
+                pantalla.Text = "Syntax ERROR";
+            }
+
         }
 
         private void restar_Click(object sender, EventArgs e)
         {
-            operador = "-";
-            primero = double.Parse(pantalla.Text);
-            pantalla.Clear();
+            try
+            {
+                operador = "-";
+                primero = double.Parse(pantalla.Text);
+                pantalla.Clear();
+            }
+            catch (Exception)
+            {
+                pantalla.Text = "Syntax ERROR";
+            }
         }
 
         private void resultado_Click(object sender, EventArgs e)
         {
-            segundo = double.Parse(pantalla.Text);
-            switch(operador)
+            try
             {
-                case "+":
-                    
-                    resultado_op = primero + segundo;
-                    pantalla.Text = resultado_op.ToString();
-                    break;
-                case "-":
-                    resultado_op = primero - segundo;
-                    pantalla.Text = resultado_op.ToString();
-                    break;
-                case "X":
-                    resultado_op = primero * segundo;
-                    pantalla.Text = resultado_op.ToString();
-                    break;
-                case "/":
-                    resultado_op = primero / segundo;
-                    pantalla.Text = resultado_op.ToString();
-                    switch(segundo)
-                    {
-                        case 0:
-                            pantalla.Text = "Math ERROR";
-                            break;
-                    }
-                    break;
- 
-            } 
+                segundo = double.Parse(pantalla.Text);
+                switch (operador)
+                {
+                    case "+":
+
+                        resultado_op = primero + segundo;
+                        pantalla.Text = resultado_op.ToString();
+                        break;
+                    case "-":
+                        resultado_op = primero - segundo;
+                        pantalla.Text = resultado_op.ToString();
+                        break;
+                    case "X":
+                        resultado_op = primero * segundo;
+                        pantalla.Text = resultado_op.ToString();
+                        break;
+                    case "/":
+                        resultado_op = primero / segundo;
+                        pantalla.Text = resultado_op.ToString();
+                        switch (segundo)
+                        {
+                            case 0:
+                                pantalla.Text = "Math ERROR";
+                                break;
+                        }
+                        break;
+                    case "=":
+                        resultado_op = primero;
+                        pantalla.Text = resultado_op.ToString();
+                        break;
+
+                }
+
+            }
+            catch (Exception) 
+            {
+                pantalla.Text = "Syntax ERROR";
+            }
         }
 
         private void botonborrarnumero_Click(object sender, EventArgs e)
